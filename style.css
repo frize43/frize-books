@@ -198,3 +198,18 @@ header{
 }
 
 }
+
+.download{
+    display:inline-block;
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:14px 30px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.download:hover{
+    background:#16a34a;
+}
