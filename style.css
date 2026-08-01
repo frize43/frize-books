@@ -1,215 +1,212 @@
+/* ==========================================
+   SPORT ACADEMY
+   Style.css
+========================================== */
+
+/* ----------- Réinitialisation ----------- */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-body{
-
-    font-family:Poppins,sans-serif;
-    background:#111827;
-    color:white;
-
+html{
+    scroll-behavior:smooth;
 }
 
-header{
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111827;
+    color:#ffffff;
+    line-height:1.6;
+}
 
+/* ----------- Header ----------- */
+
+header{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#1f2937;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:20px 10%;
-
-    background:#1f2937;
-
-    position:sticky;
-    top:0;
-
+    padding:20px 8%;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,0.25);
 }
 
 .logo{
-
-    color:#4ade80;
-
+    color:#22c55e;
+    font-size:30px;
+    font-weight:700;
 }
 
 nav{
-
     display:flex;
-    gap:25px;
-
+    gap:30px;
 }
 
 nav a{
-
     color:white;
     text-decoration:none;
+    font-weight:500;
     transition:.3s;
-
 }
 
 nav a:hover{
-
-    color:#4ade80;
-
+    color:#22c55e;
 }
 
+/* ----------- Hero ----------- */
+
 .hero{
-
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-
-    padding:100px 20px;
-
+    padding:60px 20px;
+    background:linear-gradient(135deg,#111827,#1f2937);
 }
 
 .hero h1{
-
-    font-size:50px;
+    font-size:55px;
     margin-bottom:20px;
-
 }
 
 .hero p{
-
     max-width:700px;
-    margin:auto;
     color:#d1d5db;
-
+    font-size:18px;
 }
 
+/* ----------- Bibliothèque ----------- */
+
 #bibliotheque{
-
-    padding:70px 10%;
-
+    padding:80px 8%;
 }
 
 #bibliotheque h2{
-
     text-align:center;
+    font-size:42px;
     margin-bottom:50px;
-    font-size:40px;
-
 }
 
+/* ----------- Cartes ----------- */
+
 .cards{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
-
 }
 
 .card{
-
     background:#1f2937;
-
-    border-radius:15px;
-
+    border-radius:20px;
     padding:30px;
-
     text-align:center;
-
     transition:.3s;
-
+    border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-
     transform:translateY(-10px);
-
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
+/* ----------- Livre ----------- */
+
 .book{
-
     font-size:90px;
-
     margin-bottom:20px;
-
 }
 
 .card h3{
-
+    font-size:28px;
     margin-bottom:10px;
-
 }
 
 .card p{
-
     color:#cbd5e1;
-
     margin-bottom:25px;
-
+    min-height:55px;
 }
 
-button{
-
-    background:#22c55e;
-
-    color:white;
-
-    border:none;
-
-    padding:14px 30px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    transition:.3s;
-
-}
-
-button:hover{
-
-    background:#16a34a;
-
-}
-
-footer{
-
-    margin-top:80px;
-
-    padding:30px;
-
-    background:#1f2937;
-
-    text-align:center;
-
-}
-
-@media(max-width:700px){
-
-header{
-
-    flex-direction:column;
-
-    gap:20px;
-
-}
-
-.hero h1{
-
-    font-size:35px;
-
-}
-
-}
+/* ----------- Bouton ----------- */
 
 .download{
     display:inline-block;
-    text-decoration:none;
     background:#22c55e;
     color:white;
+    text-decoration:none;
     padding:14px 30px;
     border-radius:10px;
-    transition:.3s;
     font-weight:600;
+    transition:.3s;
 }
 
 .download:hover{
     background:#16a34a;
+    transform:scale(1.05);
+}
+
+/* ----------- Footer ----------- */
+
+footer{
+    margin-top:80px;
+    padding:30px;
+    text-align:center;
+    background:#1f2937;
+    color:#d1d5db;
+}
+
+/* ----------- Responsive ----------- */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    #bibliotheque h2{
+        font-size:32px;
+    }
+
+    .book{
+        font-size:70px;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .download{
+        width:100%;
+    }
+
 }
